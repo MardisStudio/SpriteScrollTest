@@ -1,11 +1,17 @@
 let frames;
 const spriteWindow = document.getElementById("sprite-window"),
   spriteBounding = spriteWindow.getBoundingClientRect(),
+  /*
+    Change Total Frames
+  */
   totalFrames = 50;
+
 const handleScroll = (e) => {
-  //console.log(frames);
   const movingBounds = spriteWindow.getBoundingClientRect();
   const currentFrame = Math.floor(totalFrames - movingBounds.bottom / frames);
+  /*
+    Change Image Height
+  */
   spriteWindow.style.setProperty("--frame", "-" + currentFrame * 450 + "px");
   console.log(currentFrame);
 };
@@ -19,15 +25,6 @@ const toggleScroll = (entries, observer) => {
       document.removeEventListener("scroll", handleScroll);
     }
     console.log(entry.isIntersecting);
-    // Each entry describes an intersection change for one observed
-    // target element:
-    //   entry.boundingClientRect
-    //   entry.intersectionRatio
-    //   entry.intersectionRect
-    //   entry.isIntersecting
-    //   entry.rootBounds
-    //   entry.target
-    //   entry.time
   });
 };
 let options = {
