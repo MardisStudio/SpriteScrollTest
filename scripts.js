@@ -4,7 +4,7 @@ const spriteWindow = document.getElementById("sprite-window"),
   /*
     Change Total Frames
   */
-  totalFrames = 34;
+  totalFrames = 48;
 
 const handleScroll = (e) => {
   const movingBounds = spriteWindow.getBoundingClientRect();
