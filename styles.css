@@ -1,9 +1,9 @@
 body {
-  height: 300vh;
+  height: 300dvh;
   background-color: #374151;
 }
 #spacer {
-  height: 100vh;
+  height: 100dvh;
 }
 #wrap {
   height: 800px;
